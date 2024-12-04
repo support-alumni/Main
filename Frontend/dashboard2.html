@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNT College of Engineering - Alumni Dashboard</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: url('dp.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-blend-mode: lighten;
+            background-color: rgba(255, 255, 255, 0.8); /* Light overlay */
+        }
+
+        h1, h2, p {
+            margin: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #007A33;
+            color: #FFFFFF;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar img {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .navbar h1 {
+            font-size: 1.5rem;
+            flex: 1;
+            text-align: center;
+        }
+
+        .logout-btn {
+            background-color: #FFFFFF;
+            color: #007A33;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #E8E8E8;
+        }
+
+        /* Button Row */
+        .button-row {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .button-row a {
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            background-color: #007A33;
+            color: #FFFFFF;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-row a:hover {
+            background-color: #005F27;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 2rem;
+            text-align: center;
+            flex: 1; /* Makes this section grow to fill space between navbar and footer */
+        }
+
+        .welcome-card {
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 0 auto 1.5rem;
+            max-width: 600px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #007A33;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 1rem 0;
+            border-top: 2px solid #005F27;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        footer a {
+            color: #FFD700; /* Gold for contrast */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <img src="UNT-Alumni-logo-1.png" alt="UNT Alumni Logo">
+        <h1>UNT College of Engineering - Alumni Dashboard</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+
+    <!-- Button Row -->
+    <div class="button-row">
+        <a href="alumni-directory.html">Alumni Directory</a>
+        <a href="alumni-stats.html">Alumni Statistics</a>
+        <a href="update-data.html">Update Alumni Data</a>
+        <a href="access-control.html">Access Control</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="welcome-card">
+            <h2>Welcome, Dean!</h2>
+            <p>Explore the alumni data using the options above. Each section provides a detailed view of alumni activities, job placements, and contributions.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 UNT College of Engineering</p>
+        <p>
+            Visit us at <a href="https://engineering.unt.edu" target="_blank">engineering.unt.edu</a>
+        </p>
+    </footer>
+
+    <script>
+        // Function to simulate logout
+        function logout() {
+            alert('You have been logged out.');
+            window.location.href = "login.html"; // Redirect to login page
+        }
+    </script>
+</body>
+</html>

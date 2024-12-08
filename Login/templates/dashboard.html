@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dean's Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #d4edc9; /* Light green background */
+    }
+
+    .navbar {
+      background-color: #007b5e; /* UNT green */
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .navbar img {
+      height: 50px;
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .vertical-nav {
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #034c2c; /* Dark UNT green */
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .vertical-nav img {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .vertical-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #007b5e;
+    }
+
+    .vertical-nav a:hover {
+      background-color: #007b5e;
+    }
+
+    .content {
+      margin-left: 250px; /* Offset for vertical nav */
+      padding: 20px;
+    }
+
+    .powerbi-container {
+      margin-top: 20px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .powerbi-container h2 {
+      color: #034c2c;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="UNT-Alumni-logo-1.png" alt="UNT Alumni Logo">
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Logout</a>
+    </div>
+  </div>
+
+  <!-- Vertical Navigation -->
+  <div class="vertical-nav">
+    <img src="UNT-Alumni-logo-1.png">
+    <a href="alumni-directory.html">Alumni Directory</a>
+    <a href="settings.html">Settings</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h1>Welcome to the Dean's Dashboard</h1>
+    <p>This dashboard allows you to manage alumni data, view reports, and more.</p>
+
+    <!-- Power BI Embed -->
+    <div class="powerbi-container">
+      <h2>Embedded Power BI Report</h2>
+      <iframe 
+        src="https://app.powerbi.com/view?r=eyJrIjoiMjU2OTgzMDItNmY4OS00MWU4LWIzZjEtZDhmNjExODNhZGNiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9" 
+        frameborder="0" 
+        allowFullScreen="true">
+      </iframe>
+    </div>
+  </div>
+</body>
+</html>

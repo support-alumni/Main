@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alumni Directory | UNT</title>
   <style>
+    /* General Reset & Background */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
     }
+
+    /* Header/Navbar */
     header {
       background-color: #00853E;
       color: white;
@@ -19,30 +22,63 @@
       justify-content: space-between;
       padding: 15px 30px;
     }
+
     header img {
       height: 50px;
     }
+
     header nav a {
       color: white;
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
     }
+
     header nav a:hover {
       text-decoration: underline;
     }
-    main {
-      padding: 20px;
+
+    /* Sidebar (Vertical Navigation) */
+    .vertical-nav {
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #034c2c; /* Dark UNT green */
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .vertical-nav img {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .vertical-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      width: 100%;
       text-align: center;
+      border-bottom: 1px solid #007b5e;
     }
-    .embed-container {
-      margin: 20px auto;
-      max-width: 90%;
-      height: 600px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: hidden;
+
+    .vertical-nav a:hover {
+      background-color: #007b5e;
     }
+
+    /* Main Content */
+    .content {
+      margin-left: 250px; /* Offset for vertical nav */
+      padding: 20px;
+    }
+
+    /* Footer */
     footer {
       background-color: #00853E;
       color: white;
@@ -52,31 +88,53 @@
       bottom: 0;
       width: 100%;
     }
+
+    .embed-container {
+      margin: 20px auto;
+      max-width: 90%;
+      height: 600px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+    }
   </style>
 </head>
 <body>
-  <header>
+  <!-- Sidebar -->
+  <div class="vertical-nav">
     <img src="UNT-Alumni-logo-1.png" alt="UNT Alumni Logo">
-    <nav>
-      <a href="dashboard.html">Home</a>
-      <a href="logout.html">Logout</a>
-    </nav>
-  </header>
-  <main>
-    <h1>Alumni Directory</h1>
-    <p>Explore the comprehensive directory of UNT alumni.</p>
-    <div class="embed-container">
-      <!-- Power BI embed link -->
-      <iframe
-        src="https://app.powerbi.com/view?r=eyJrIjoiMjAyNGU3MWUtNGQ2ZS00NDA4LTlkMmItYzgyNTM1NTk5MzNhIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9"
-        frameborder="0"
-        style="width: 100%; height: 100%;"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </main>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="settings.html">Settings</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <header>
+      <img src="UNT-Alumni-logo-1.png" alt="UNT Alumni Logo">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="logout.html">Logout</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Alumni Directory</h1>
+      <p>Explore the comprehensive directory of UNT alumni.</p>
+      <div class="embed-container">
+        <!-- Power BI embed link -->
+        <iframe
+          src="https://app.powerbi.com/view?r=eyJrIjoiMjAyNGU3MWUtNGQ2ZS00NDA4LTlkMmItYzgyNTM1NTk5MzNhIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9"
+          frameborder="0"
+          style="width: 100%; height: 100%;"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 University of North Texas </p>
+    <p>&copy; 2024 University of North Texas</p>
   </footer>
 </body>
 </html>

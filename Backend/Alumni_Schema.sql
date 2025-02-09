@@ -27,7 +27,7 @@ CREATE TABLE tbl_school
     aid_fk INT NOT NULL,
     suniversity_name VARCHAR(100),
     suniversity_major VARCHAR(50),
-	suniversity_minor VARCHAR(50),
+    suniversity_minor VARCHAR(50),
     suniversity_location VARCHAR(100),
     suniversity_start DATE,
     suniversity_end DATE,
@@ -43,7 +43,7 @@ CREATE TABLE tbl_experience
     etitle VARCHAR(50),
     ecompany_name VARCHAR(50),
     ecompany_location VARCHAR(50),
-    ecompany_no_employee INT,
+    ecompany_size INT,
     etitle_start DATE,
     etitle_end DATE,
     
